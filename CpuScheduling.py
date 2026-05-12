@@ -309,7 +309,7 @@ def fcfs_with_io(process_list):
 
     for p in processes:
         turnaround_time = p["finish_time"] - p["arrival"]
-        waiting_time = turnaround_time - p["burst"] - p["io_time"]
+        waiting_time = turnaround_time - p["burst"]
         response_time = p["first_start_time"] - p["arrival"]
 
         total_tat += turnaround_time
@@ -345,27 +345,8 @@ if __name__ == "__main__":
     process_list = [
         ["P1", 10, 0, [2, 3]],
         ["P2", 6, 2, [1, 2]],
-        ["P3", 8, 4, [3, 1]],
-        ["P4", 7, 5, [2, 2]],
-        ["P5", 5, 6, [1, 2]],
-
-        ["P6", 9, 7, [4, 3]],
-        ["P7", 4, 8, [2, 1]],
-        ["P8", 11, 9, [5, 2]],
-        ["P9", 6, 10, [2, 3]],
-        ["P10", 8, 11, [3, 2]],
-
-        ["P11", 7, 12, [2, 1]],
-        ["P12", 5, 13, [1, 3]],
-        ["P13", 9, 14, [4, 2]],
-        ["P14", 6, 15, [2, 2]],
-        ["P15", 10, 16, [5, 3]],
-
-        ["P16", 4, 17, [1, 1]],
-        ["P17", 8, 18, [3, 2]],
-        ["P18", 7, 19, [2, 3]],
-        ["P19", 5, 20, [1, 2]],
-        ["P20", 9, 21, [4, 1]]
+        ["P3", 8, 4, [3, 1]]
+      
     ]
 
     #fcfs_with_io(process_list)
@@ -513,7 +494,7 @@ def print_results(title, processes, gantt):
 
     for p in processes:
         turnaround_time = p["finish_time"] - p["arrival"]
-        waiting_time = turnaround_time - p["burst"] - p["io_time"]
+        waiting_time = turnaround_time - p["burst"]
         response_time = p["first_start_time"] - p["arrival"]
 
         total_tat += turnaround_time
@@ -588,14 +569,7 @@ if __name__ == "__main__":
     process_list = [
         ["P1", 10, 0, [2, 3]],
         ["P2", 6, 2, [1, 2]],
-        ["P3", 8, 4, [3, 1]],
-        ["P4", 7, 5, [2, 2]],
-        ["P5", 5, 6, [1, 2]],
-        ["P6", 9, 7, [4, 3]],
-        ["P7", 4, 8, [2, 1]],
-        ["P8", 11, 9, [5, 2]],
-        ["P9", 6, 10, [2, 3]],
-        ["P10", 8, 11, [3, 2]]
+        ["P3", 8, 4, [3, 1]]
     ]
 
     # FOR PRIORITY ONLY
